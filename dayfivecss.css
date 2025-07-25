@@ -1,0 +1,30 @@
+#BoxColorChange {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    animation-name: ColorChange;
+    animation-duration: 4s;
+}
+
+@keyframes ColorChange {
+    from {background-color: white;}
+    to {background-color: black;}
+}
+
+#Move {
+    width: 100px;
+    height: 100px;
+    background-color: #CCCCFF;
+    position: relative;
+    animation-name: MovingCube;
+    animation-duration: 4s;
+}
+
+@keyframes MovingCube {
+    0% {top: 0px; left: 0px; background-color: red;}
+    20% {top: 50px; left: 024px; background-color: orange;}
+    40% {top: 46px; left: 53px; background-color: yellow;}
+    60% {top: 0px; left: 32px; background-color: lime;}
+    80% {top: 89px; left: 100px; background-color: blue;}
+    100% {top: 43px; left: 0px; background-color: magenta;}
+}

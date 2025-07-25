@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+</head>
+<body>
+    <h1>JavaScript Hangman Game</h1>
+
+    <script>
+        //Array Of Words//
+        var Words = ["icode", "cookie", "twothousandsevenhundredandsixtythree", "forsaken", "mafioso", "captainllama", "you'lneverguessthis>:3"];
+
+var word = Words[Math.floor(Math.random() * Words.length)];
+
+
+var AnswerArray = [];
+
+for (var i = 0; i < word.length; i++) {
+    AnswerArray[i] = "_";
+    
+}
+
+var remainingletters = word.length;
+
+// The Game Loop //
+
+while(remainingletters > 0) {
+    alert(AnswerArray.join(" "));
+
+    var guess = prompt("Please Guess A letter, Or Click Cancel");
+
+    if(guess === null) {
+    //exit game //
+    break;
+
+} else if (guess.length !== 1) {
+    alert("Please Enter One Letter At A Time");
+} else {
+    guess = guess.toLowerCase();
+
+    for (var j = 0; j < word.length; j++) {
+    if(word[j] === guess) {
+        AnswerArray[j] = guess;
+        remainingletters --;
+    }
+    
+}
+}
+}
+
+alert(AnswerArray.join(" "));
+alert("YOU WON THE ANSWER WAS "+ word);
+
+//  Get A Gues //
+
+
+
+
+
+
+    </script>
+</body>
+</html>
